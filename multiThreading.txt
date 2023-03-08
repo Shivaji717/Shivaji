@@ -1,0 +1,17 @@
+package multithreading;
+
+public class Daemonthread extends Thread {
+	public void run() {
+		System.out.println(Thread.currentThread().isDaemon());
+		System.out.println("Daemom thread");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("main thread");
+		Daemonthread obj = new Daemonthread();
+		obj.setDaemon(true);
+		obj.start();
+	}
+
+}
